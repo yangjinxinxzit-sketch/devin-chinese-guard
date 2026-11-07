@@ -1,0 +1,67 @@
+{
+  "name": "devin-chinese-guard",
+  "displayName": "Devin 中文更新维护",
+  "description": "更新后自动识别并修复 Devin 主界面汉化，按版本备份，保留一键回退。",
+  "publisher": "yangjinxin",
+  "version": "1.0.3",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "main": "./extension.cjs",
+  "extensionKind": [
+    "ui"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": true
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "devinChinese.repair",
+        "title": "Devin 汉化：检查并修复"
+      },
+      {
+        "command": "devinChinese.status",
+        "title": "Devin 汉化：查看维护状态"
+      },
+      {
+        "command": "devinChinese.restore",
+        "title": "Devin 汉化：回退当前版本补丁"
+      }
+    ],
+    "configuration": {
+      "title": "Devin 中文更新维护",
+      "properties": {
+        "devinChinese.autoRepair": {
+          "type": "boolean",
+          "default": true,
+          "scope": "application",
+          "description": "启动时及每五分钟检查新版资源。按主进程启动时间持续区分资源就绪与待完整重启；自动备份和修复，退出操作由你确认。"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "test": "node --test test/*.test.cjs",
+    "pack": "python3 scripts/package-vsix.py",
+    "verify:local": "node scripts/verify-local.cjs"
+  },
+  "dependencies": {
+    "acorn": "8.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yangjinxinxzit-sketch/devin-chinese-guard.git"
+  },
+  "homepage": "https://github.com/yangjinxinxzit-sketch/devin-chinese-guard",
+  "bugs": {
+    "url": "https://github.com/yangjinxinxzit-sketch/devin-chinese-guard/issues"
+  }
+}

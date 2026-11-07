@@ -1,0 +1,26 @@
+Devin Chinese Guard
+
+This is an unofficial community localization tool, not affiliated with or
+endorsed by Cognition, Devin, Windsurf, Microsoft, or the VS Code project.
+Their names and trademarks belong to their respective owners.
+
+The DOM translation runtime and portions of the Chinese translation data are
+adapted from N1n3VASthR33H/devin-zh 0.1.9, distributed under the MIT License:
+https://github.com/vvvvvvvvvashhh/devin-zh
+https://open-vsx.org/extension/N1n3VASthR33H/devin-zh
+The original notice is retained in THIRD_PARTY_LICENSE.
+
+Additional translation data and terminology corrections were prepared during
+local adaptation. Some additional phrases were machine-translated and then
+checked for interpolation placeholders and markup; linguistic review is not
+exhaustive. New unknown phrases are retained in English.
+
+Acorn 8.19.0 is an MIT-licensed dependency. Its license is included in the
+installed dependency and in packaged VSIX files:
+https://github.com/acornjs/acorn
+
+Devin executable files, original application bundles, full original English
+catalogs, local backups, logs, account data, and conversations are not part of
+this repository or its VSIX package. The installed application is inspected
+locally at runtime. English catalog fingerprints are SHA-256 values used to
+avoid assigning an old translation to changed upstream text.
